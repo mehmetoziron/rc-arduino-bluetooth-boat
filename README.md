@@ -70,7 +70,8 @@ Dieses Projekt ist ein RC-Boot (ferngesteuertes Boot), das über ein Android-Tel
 
 ## 🚀 Einrichtung
 
-1. Die Datei `bluetooth_boat.ino` auf den Arduino hochladen
+1. Die Datei `bluetooth_boat.ino` auf den Arduino hochladen  
+> ⚠️ **Wichtig:** Vor dem Hochladen unbedingt die RX- und TX-Verbindungen zum HC-05-Modul trennen, da sie den Upload-Prozess stören können.
 2. Verkabelung gemäß Schaltplan vornehmen
 3. Android-App "Arduino Car" öffnen und mit dem HC-05 koppeln (PIN ist normalerweise `1234` oder `0000`)
 4. Im Einstellungsmenü „J0-180“ in „J0-8“ ändern
