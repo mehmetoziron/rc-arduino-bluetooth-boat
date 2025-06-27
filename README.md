@@ -64,7 +64,7 @@ Dieses Projekt ist ein RC-Boot (ferngesteuertes Boot), das über ein Android-Tel
 
 > (Hier ein Bild des Verdrahtungsplans einfügen)
 
-![Schaltplan](resources/wiring_diagram.png)
+![Schaltplan](wiring_diagram.png)
 
 ---
 
