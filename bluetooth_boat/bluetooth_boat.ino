@@ -35,10 +35,6 @@ void loop() {
 
     delay(10);
     hamud = Serial.read();
-    //x=atoi(hamud);
-
-
-
 
     if (hamud == 'J') {
       delay(10);
@@ -54,22 +50,15 @@ void loop() {
       }
       delay(10);
       numericValue = receivedString.toInt();
-      // Artık numericValue, 0-8 arası bir sayısal değeri tutuyor
-      //Serial.print("Numeric value: ");
       numericValue = 255 * numericValue / 8;
       numericR = numericValue * factorR;
       numericL = numericValue * factorL;
-      //Serial.println(numericValue);
 
       analogWrite(MahmudDevirR, numericR); // sag motor devri
       analogWrite(MahmudDevirL, numericL); // sol motor devri
-      // String'i sıfırla
       receivedString = "";
     }
 
-
-
-    //    fonk();
     if (hamud == 'M') {
       digitalWrite(MahmudMotor1 , LOW);
       digitalWrite(MahmudMotor2 , HIGH);
@@ -77,10 +66,6 @@ void loop() {
       digitalWrite(MahmudMotor4 , HIGH);
     }
 
-    //    if(hamud == 'S'){
-    //     digitalWrite(MahmudMotor1 , LOW);
-    //     digitalWrite(MahmudMotor2 , LOW);
-    //    }
     if (hamud == 'm') {
       digitalWrite(MahmudMotor1 , HIGH);
       digitalWrite(MahmudMotor2 , LOW);
@@ -108,14 +93,14 @@ void loop() {
       }
     }
 
-    if (hamud == 'Y' && factor == true) {   //motor dengesi sol motoru zayiflatma (saga yöneltme)
+    if (hamud == 'Y' && factor == true) {   //motor dengesi sol motoru zayiflatma (sağa yöneltme)
       factor == false;
       factorR = 0.9 * factorR;
       numericR *= factorR;
       analogWrite(MahmudDevirR, numericR);
     }
 
-    if (hamud == 'X' && factor == true) {   //motor dengesi sol motoru zayiflatma (saga yöneltme)
+    if (hamud == 'X' && factor == true) {   //motor dengesi sağ motoru zayiflatma (sola yöneltme)
       factor == false;
       factorL = 0.9 * factorL;
       numericL *= factorL;
@@ -135,16 +120,3 @@ void loop() {
     }
   }
 }
-
-//void fonk(){
-//
-//    Serial.print(hamud);
-//    Serial.println(5);
-//    Serial.println(strlen(hamud));
-//    Serial.println(x);
-//}
-/*digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(100);                       // wait for a second
-  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
-  delay(100);
-*/
