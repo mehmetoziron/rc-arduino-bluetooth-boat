@@ -86,7 +86,7 @@ Dieses Projekt ist ein RC-Boot (ferngesteuertes Boot), das über ein Android-Tel
 ![Bootsbild](resource/Elektronikschaltung.jpg)
 ![Bootsbild](resource/Motor.jpg)
 ![Bootsbild](resource/Ruder.jpg)
-![Bootsbild](resource/Boot-auf-dem-See.jpg)
+![Bootsbild](resource/Boot-auf-dem-See.png)
 ![Bootsbild](resource/Arduino-Car.jpg)
 ![Bootsbild](resource/Arduino-Car-Enstellungen.jpg)
 
